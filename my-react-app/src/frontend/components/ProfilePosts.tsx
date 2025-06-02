@@ -50,7 +50,7 @@ const ProfilePosts: React.FC<ProfilePostsProps> = ({ userId, isOwnProfile }) => 
             if (!userId) return;
             try {
                 const response = await fetch(`https://iu-forum.onrender.com/api/getUserProfileThread?userId=${userId}`);
-
+                console.log(response);
                 if (response.ok) {
                     const res = await response.json();
                     console.log(res)
