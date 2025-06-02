@@ -12,10 +12,10 @@ const Footer: React.FC<FooterProps> = ({ headerFooterColor }) => {
         <span>© 2024 IU Forum</span>
       </div>
       <div className="footer-right">
-        <a href="/about" className="footer-link">About</a>
-        <a href="/privacy" className="footer-link">Privacy</a>
-        <a href="/terms" className="footer-link">Terms</a>
-        <a href="/help" className="footer-link">Help</a>
+        <a href="#" className="footer-link">About</a>
+        <a href="#" className="footer-link">Privacy</a>
+        <a href="#" className="footer-link">Terms</a>
+        <a href="#" className="footer-link">Help</a>
       </div>
     </footer>
   );
