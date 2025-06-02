@@ -15,8 +15,8 @@ const connection = mysql.createPool({
     password: db_password,
     database: db_database,
     waitForConnections: true,
-    connectionLimit: 5,
-    queueLimit: 0
+    connectionLimit: 4,
+    queueLimit: 20
 });
 
 // Test the connection
