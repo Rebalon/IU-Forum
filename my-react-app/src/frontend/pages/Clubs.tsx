@@ -19,7 +19,7 @@ const Clubs: React.FC = () => {
   useEffect(() => {
     const fetchClubs = async () => {
       try {
-        const response = await fetch('https://localhost:8081/api/clubs');
+        const response = await fetch('https://iu-forum.onrender.com/api/clubs');
         if (!response.ok) {
           throw new Error('Failed to fetch clubs');
         }

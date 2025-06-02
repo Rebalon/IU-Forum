@@ -13,7 +13,7 @@ const UserProfile: React.FC = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://localhost:8081/api/user/${id}`)
+      fetch(`https://iu-forum.onrender.com/api/user/${id}`)
         .then(res => {
           if (!res.ok) throw new Error('User not found');
           return res.json();

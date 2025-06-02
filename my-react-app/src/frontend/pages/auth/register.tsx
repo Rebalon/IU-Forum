@@ -118,7 +118,7 @@ const RegisterForm: React.FC = () => {
         }
 
         try {
-            const response = await fetch(`https://localhost:8081/api/check-username/${username}`);
+            const response = await fetch(`https://iu-forum.onrender.com/api/check-username/${username}`);
             const data = await response.json();
             // print data
             console.log('Username check response:', data);
@@ -251,7 +251,7 @@ const RegisterForm: React.FC = () => {
         }
 
         try {
-            const verificationResponse = await fetch("https://localhost:8081/api/verification", {
+            const verificationResponse = await fetch("https://iu-forum.onrender.com/api/verification", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -275,7 +275,7 @@ const RegisterForm: React.FC = () => {
     };
     const handleVerificationComplete = async (code: string) => {
         try {
-            const verificationResponse = await fetch("https://localhost:8081/api/verify-code", {
+            const verificationResponse = await fetch("https://iu-forum.onrender.com/api/verify-code", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -286,7 +286,7 @@ const RegisterForm: React.FC = () => {
                 }),
             });
             if (verificationResponse.ok) {
-                const registerResponse = await fetch("https://localhost:8081/api/register", {
+                const registerResponse = await fetch("https://iu-forum.onrender.com/api/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

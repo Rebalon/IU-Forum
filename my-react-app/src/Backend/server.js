@@ -56,16 +56,16 @@ if (fs.existsSync(sslKeyPath) && fs.existsSync(sslCertPath)) {
         key: fs.readFileSync(sslKeyPath),
         cert: fs.readFileSync(sslCertPath)
     };
-    
+
     server = https.createServer(sslOptions, app);
     server.listen(PORT, () => {
-        console.log(`🚀 HTTPS Server running on https://localhost:${PORT}`);
+        console.log(`🚀 HTTPS Server running on https://iu-forum.onrender.com:${PORT}`);
         console.log(`💡 To enable HTTPS, create SSL certificates in ./ssl/ directory`);
     });
 } else {
     // Fallback to HTTP if no SSL certificates
     server = app.listen(PORT, () => {
-        console.log(`🚀 HTTP Server running on http://localhost:${PORT}`);
+        console.log(`🚀 HTTP Server running on http://iu-forum.onrender.com:${PORT}`);
         console.log(`💡 To enable HTTPS, create SSL certificates in ./ssl/ directory`);
     });
 }

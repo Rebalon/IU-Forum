@@ -65,7 +65,7 @@ const App: React.FC = () => {
     useEffect(() => {
         const checkCookie = async () => {
             try {
-                const response = await fetch('https://localhost:8081/api/check-cookie', {
+                const response = await fetch('https://iu-forum.onrender.com/api/check-cookie', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ const App: React.FC = () => {
         }
 
         try {
-            const loginResponse = await fetch("https://localhost:8081/api/login", {
+            const loginResponse = await fetch("https://iu-forum.onrender.com/api/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -138,7 +138,7 @@ const App: React.FC = () => {
             }
             setUID(loginResult.userId);
 
-            const verificationResponse = await fetch("https://localhost:8081/api/verification", {
+            const verificationResponse = await fetch("https://iu-forum.onrender.com/api/verification", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -166,7 +166,7 @@ const App: React.FC = () => {
     };
     const handleVerificationComplete = async (code: string) => {
         try {
-            const verificationResponse = await fetch("https://localhost:8081/api/verify-code", {
+            const verificationResponse = await fetch("https://iu-forum.onrender.com/api/verify-code", {
                 method: "POST",
                 credentials: 'include',
                 headers: {

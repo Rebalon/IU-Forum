@@ -32,7 +32,7 @@ const processBase64Images = async (htmlContent: string): Promise<string> => {
                 const formData = new FormData();
                 formData.append('image', blob, 'image.png');
 
-                const response = await fetch('https://localhost:8081/api/uploadImage', {
+                const response = await fetch('https://iu-forum.onrender.com/api/uploadImage', {
                     method: 'POST',
                     body: formData,
                 });
@@ -77,7 +77,7 @@ const CreateThreadModal: React.FC<CreateThreadModalProps> = ({ isOpen, onClose }
 
     const fetchTopics = async () => {
         try {
-            const response = await fetch('https://localhost:8081/api/topics');
+            const response = await fetch('https://iu-forum.onrender.com/api/topics');
             if (response.ok) {
                 const data = await response.json();
                 setTopics(data.topics);
@@ -89,7 +89,7 @@ const CreateThreadModal: React.FC<CreateThreadModalProps> = ({ isOpen, onClose }
 
     const fetchTags = async () => {
         try {
-            const response = await fetch('https://localhost:8081/api/tags');
+            const response = await fetch('https://iu-forum.onrender.com/api/tags');
             if (response.ok) {
                 const data = await response.json();
                 setTags(data.tags);
@@ -156,7 +156,7 @@ const CreateThreadModal: React.FC<CreateThreadModalProps> = ({ isOpen, onClose }
             formData.append('files', file);
         });
         try {
-            const response = await fetch('https://localhost:8081/api/threads', {
+            const response = await fetch('https://iu-forum.onrender.com/api/threads', {
                 method: 'POST',
                 body: formData,
             });

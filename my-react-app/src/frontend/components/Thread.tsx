@@ -51,7 +51,7 @@ const processBase64Images = async (htmlContent: string): Promise<string> => {
         const formData = new FormData();
         formData.append('image', blob, 'image.png');
 
-        const response = await fetch('https://localhost:8081/api/uploadImage', {
+        const response = await fetch('https://iu-forum.onrender.com/api/uploadImage', {
           method: 'POST',
           body: formData,
         });
@@ -82,7 +82,7 @@ const Thread: React.FC<ThreadProps> = ({ id, title, content, description, author
 
     const getUserAvatar = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/getUserAvatar?userID=${userId}`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/getUserAvatar?userID=${userId}`);
         if (response.ok) {
           const res = await response.json();
           setUserAvatar(res.useravatar[0].avatar);
@@ -110,7 +110,7 @@ const Thread: React.FC<ThreadProps> = ({ id, title, content, description, author
     // 🧠 Process base64 images
     content = await processBase64Images(content);
     try {
-      const response = await fetch('https://localhost:8081/api/addNewComment', {
+      const response = await fetch('https://iu-forum.onrender.com/api/addNewComment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ const Thread: React.FC<ThreadProps> = ({ id, title, content, description, author
     }
 
     try {
-      const response = await fetch(`https://localhost:8081/api/thread/${id}`, {
+      const response = await fetch(`https://iu-forum.onrender.com/api/thread/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

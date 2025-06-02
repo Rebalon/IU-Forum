@@ -49,7 +49,7 @@ const ProfilePosts: React.FC<ProfilePostsProps> = ({ userId, isOwnProfile }) => 
         const fetchUserProfilePost = async () => {
             if (!userId) return;
             try {
-                const response = await fetch(`https://localhost:8081/api/getUserProfileThread?userId=${userId}`);
+                const response = await fetch(`https://iu-forum.onrender.com/api/getUserProfileThread?userId=${userId}`);
 
                 if (response.ok) {
                     const res = await response.json();
@@ -59,7 +59,7 @@ const ProfilePosts: React.FC<ProfilePostsProps> = ({ userId, isOwnProfile }) => 
                     const formattedPosts: Thread[] = await Promise.all(
                         data.map(async (post: any) => {
                             try {
-                                const response = await fetch(`https://localhost:8081/api/getAllCommentOfThread?thread_id=${post.ID}`);
+                                const response = await fetch(`https://iu-forum.onrender.com/api/getAllCommentOfThread?thread_id=${post.ID}`);
                                 const commentData = await response.json();
                                 const formattedComments: Comment[] = (commentData.comments || []).map((cmt: any) => ({
                                     id: cmt.ID,
@@ -103,7 +103,7 @@ const ProfilePosts: React.FC<ProfilePostsProps> = ({ userId, isOwnProfile }) => 
         if (newPostContent.trim() === '') return;
 
         try {
-            const response = await fetch('https://localhost:8081/api/addNewThread', {
+            const response = await fetch('https://iu-forum.onrender.com/api/addNewThread', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ const ProfilePosts: React.FC<ProfilePostsProps> = ({ userId, isOwnProfile }) => 
         if (!content) return;
 
         try {
-            const response = await fetch('https://localhost:8081/api/addNewComment', {
+            const response = await fetch('https://iu-forum.onrender.com/api/addNewComment', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

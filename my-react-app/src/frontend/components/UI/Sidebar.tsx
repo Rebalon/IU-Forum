@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ className = '' }) => {
   useEffect(() => {
     const fetch5MostThreadTag = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/5MostThreadTag`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/5MostThreadTag`);
 
         if (response.ok) {
           const res = await response.json();

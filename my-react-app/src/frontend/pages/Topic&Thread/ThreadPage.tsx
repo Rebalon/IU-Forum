@@ -33,7 +33,7 @@ const ThreadPage: React.FC = () => {
   useEffect(() => {
     const fetchThreadAndAllComment = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/getThreadAndAllComment?threadId=${threadId}`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/getThreadAndAllComment?threadId=${threadId}`);
         if (response.ok) {
           const res = await response.json();
           const threadData = res.result; // Assuming it's a single object, not an array
@@ -72,7 +72,7 @@ const ThreadPage: React.FC = () => {
 
     const getUserAvatar = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/getUserAvatar?username=${thread.author}`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/getUserAvatar?username=${thread.author}`);
         if (response.ok) {
           const res = await response.json();
           setAvatar(res.useravatar[0].avatar);
@@ -89,7 +89,7 @@ const ThreadPage: React.FC = () => {
     if (!threadId) return;
     const fetchAttachments = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/thread/${threadId}/attachments`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/thread/${threadId}/attachments`);
         if (response.ok) {
           const res = await response.json();
           setAttachments(res.attachments || []);
@@ -155,7 +155,7 @@ const ThreadPage: React.FC = () => {
               {attachments.map((file) => (
                 <li key={file.id || file.filename}>
                   {/* <a href={`https://localhost:8081${file.link}`} download target="_blank" rel="noopener noreferrer"> */}
-                  <a href={`https://localhost:8081/api/download/${file.id}`} download target="_blank" rel="noopener noreferrer">
+                  <a href={`https://iu-forum.onrender.com/api/download/${file.id}`} download target="_blank" rel="noopener noreferrer">
                     {file.originalName || file.link.split('/').pop()}
                   </a>
                 </li>

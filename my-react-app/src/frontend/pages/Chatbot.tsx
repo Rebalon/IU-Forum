@@ -31,7 +31,7 @@ const Chatbot: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://localhost:8081/api/chatbot', {
+      const response = await fetch('https://iu-forum.onrender.com/api/chatbot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

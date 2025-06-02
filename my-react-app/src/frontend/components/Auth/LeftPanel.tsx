@@ -26,7 +26,7 @@ const LeftPanel: React.FC<LeftPanelProps> = ({
         </div>
 
         <a
-          href="https://IU.forum.edu.vn"
+          href="https://iu-forum-am8h.onrender.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="link"

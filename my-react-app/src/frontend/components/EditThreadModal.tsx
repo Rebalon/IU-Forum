@@ -32,7 +32,7 @@ const EditThreadModal: React.FC<EditThreadModalProps> = ({
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`https://localhost:8081/api/thread/${threadId}`, {
+      const response = await fetch(`https://iu-forum.onrender.com/api/thread/${threadId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

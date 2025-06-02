@@ -24,7 +24,7 @@ const Postings: React.FC<PostingsProps> = ({ userId }) => {
 
     const getAllThread = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/getAllThread?userID=${userId}`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/getAllThread?userID=${userId}`);
         if (response.ok) {
           const res = await response.json();
           console.log(res);

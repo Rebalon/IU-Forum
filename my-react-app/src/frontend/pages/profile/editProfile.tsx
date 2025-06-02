@@ -42,7 +42,7 @@ const EditProfile: React.FC<EditProfileProps> = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`https://localhost:8081/api/getUserProfile`, {
+        const response = await fetch(`https://iu-forum.onrender.com/api/getUserProfile`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ const EditProfile: React.FC<EditProfileProps> = () => {
         },
       };
   
-      const response = await fetch('https://localhost:8081/api/updateUserProfile', {
+      const response = await fetch('https://iu-forum.onrender.com/api/updateUserProfile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -123,7 +123,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ isOwnProfile, user }) => {
       const formData = new FormData();
       formData.append("image", blob, "image.png");
       formData.append("userId", userId);
-      const uploadresponse = await fetch("https://localhost:8081/api/uploadAvatar", {
+      const uploadresponse = await fetch("https://iu-forum.onrender.com/api/uploadAvatar", {
         method: "POST",
         body: formData,
       });

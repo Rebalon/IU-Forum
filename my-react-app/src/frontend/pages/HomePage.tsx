@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
       // fallback to loading all categories and topics
       const fetchDefaultData = async () => {
         try {
-          const response = await fetch(`https://localhost:8081/api/getAllCategoryAndTopic`);
+          const response = await fetch(`https://iu-forum.onrender.com/api/getAllCategoryAndTopic`);
           if (response.ok) {
             const res = await response.json();
             const sectionData = res.result;

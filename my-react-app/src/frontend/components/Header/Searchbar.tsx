@@ -30,7 +30,7 @@ const SearchBar: React.FC = () => {
     const params = new URLSearchParams(searchData).toString();
     if (searchType === 'category') {
       try {
-        const response = await fetch(`https://localhost:8081/api/search?${params}`);
+        const response = await fetch(`https://iu-forum.onrender.com/api/search?${params}`);
         const result = await response.json();
         if (response.ok && result.result.length > 0) {
           navigate('/home', { state: { searchResults: result.result } });

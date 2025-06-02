@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ headerFooterColor, setHeaderFooterColor
         return;
       }
       try {
-        const response = await fetch('https://localhost:8081/api/getUserProfile', {
+        const response = await fetch('https://iu-forum.onrender.com/api/getUserProfile', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userId }),
@@ -81,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ headerFooterColor, setHeaderFooterColor
   const isGuest = username === 'Guest';
   const handleLogout = async () => {
     try {
-      const response = await fetch('https://localhost:8081/api/logout', {
+      const response = await fetch('https://iu-forum.onrender.com/api/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
