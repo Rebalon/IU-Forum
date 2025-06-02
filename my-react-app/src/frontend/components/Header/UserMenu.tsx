@@ -89,7 +89,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ username, avatarUrl, activeTab, set
                 <div>
                   <a href="#" onClick={e => handleMenuClick(e, '/news-feed')}>News feed</a>
                   <a href="#" onClick={e => handleMenuClick(e, '/your-content')}>Your content</a>
-                  <a href="/Profile" onClick={e => handleMenuClick(e, '/profile')}>Account details</a>
+                  <a href="/Profile" onClick={e => handleMenuClick(e, '/Profile')}>Account details</a>
                   <a href="#" onClick={e => handleMenuClick(e, '/changePassword')}>Password and security</a>
                   <a href="#" onClick={e => handleMenuClick(e, '/privacy')}>Privacy</a>
                   <a href="#" onClick={e => handleMenuClick(e, '/preferences')}>Preferences</a>
