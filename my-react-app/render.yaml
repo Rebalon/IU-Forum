@@ -2,8 +2,8 @@ services:
   - type: web
     name: iu-forum
     env: static
-    staticPublishPath: my-react-app/build
     buildCommand: npm install && npm run build
+    staticPublishPath: build
     routes:
       - type: rewrite
         source: /*
