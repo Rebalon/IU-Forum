@@ -7,6 +7,7 @@ const db_user = process.env.DB_USER;
 const db_password = process.env.DB_PASSWORD;
 const db_database = process.env.DB_NAME;
 
+console.log(db_host, db_port, db_user, db_password, db_database);
 const connection = mysql.createPool({
     host: db_host,
     port: db_port,
