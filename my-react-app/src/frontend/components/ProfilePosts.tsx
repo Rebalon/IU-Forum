@@ -53,7 +53,6 @@ const ProfilePosts: React.FC<ProfilePostsProps> = ({ userId, isOwnProfile }) => 
                 console.log(response);
                 if (response.ok) {
                     const res = await response.json();
-                    console.log(res)
                     const data = res.threads;
                     const userdata = res.user;
                     const formattedPosts: Thread[] = await Promise.all(
