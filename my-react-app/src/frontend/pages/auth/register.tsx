@@ -70,7 +70,7 @@ const RegisterForm: React.FC = () => {
     const [focusedField, setFocusedField] = useState<string | null>(null);
 
     const [validation, setValidation] = useState<ValidationState>(initialValidationState);
-    const usernameCheckTimeout = useRef<ReturnType<typeof setTimeout>>(null);
+    const usernameCheckTimeout = useRef<NodeJS.Timeout | null>(null);
 
     const handleFocus = (fieldName: string) => {
         setFocusedField(fieldName);
@@ -350,9 +350,9 @@ const RegisterForm: React.FC = () => {
                     )}
 
                     {successMessage && (
-                        <div style={{ 
-                            color: 'white', 
-                            marginBottom: '1rem', 
+                        <div style={{
+                            color: 'white',
+                            marginBottom: '1rem',
                             textAlign: 'center',
                             backgroundColor: '#4CAF50',
                             padding: '10px',
