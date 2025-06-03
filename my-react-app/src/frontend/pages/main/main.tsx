@@ -18,7 +18,7 @@ const MainPage: React.FC = () => {
       <div className="main-content">
         <div className="main-column">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/*" element={<HomePage />} />
             <Route path="/topic/:topicId" element={<TopicPage />} />
             <Route path="/thread/:threadId" element={<ThreadPage />} />
           </Routes>
