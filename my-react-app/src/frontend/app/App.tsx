@@ -32,6 +32,7 @@ export default function App() {
                 <Routes>
                     <Route element={<LayoutComponent />}>
                         <Route path="/*" element={<Main />} />
+                        <Route path="/main" element={<HomePage />} />
                         <Route path="/home" element={<HomePage />} />
                         <Route path="/topic" element={<TopicPage />} />
                         <Route path="/profile/:id" element={<UserProfile1 />} />
